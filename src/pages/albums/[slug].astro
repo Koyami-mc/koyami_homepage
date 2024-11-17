@@ -1,0 +1,93 @@
+---
+import { getCollection } from 'astro:content';
+import "../../layouts/albumpage.css";
+import Header from '../../components/Header.astro';
+import "../../layouts/works.css";
+import PageHeader from "../../components/PageHeader.astro";
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const selfReleases = await getCollection('self-releases');
+  const others = await getCollection('others');
+  const allAlbums = [...selfReleases, ...others];
+
+  return allAlbums.map((album) => ({
+    params: { slug: album.slug },
+  }));
+}
+
+const { slug } = Astro.params; // Astro.paramsを使用してslugを取得
+const selfReleases = await getCollection('self-releases');
+const others = await getCollection('others');
+const allAlbums = [...selfReleases, ...others];
+const album = allAlbums.find((entry) => entry.slug === slug);
+
+if (!album) {
+  throw new Error(`Album not found for slug: ${slug}`);
+}
+---
+
+<Layout>
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{album.data.title}</title>
+  </head>
+  <Header />
+  <PageHeader pageName="Works" />
+  <body>
+    <div class="container">
+      <section class="album-detail">
+        <!-- 左側に大きなジャケット画像 -->
+        <div class="album-image">
+          <img src={`/images/${album.data.image}`} alt={album.data.title} />
+        </div>
+        
+        <!-- 右側にタイトル・リリース日・説明文 -->
+        <div class="album-info">
+          <h1>{album.data.title}</h1>
+          <h3>こやみ {album.data.count}</h3>
+          <p><strong></strong> {album.data.date}</p>
+          <p class="price">{album.data.price} (会場価格)</p>
+          <p class="description">{album.data.description}</p>
+          <p class="description2">{album.data.description2}</p>
+        </div>
+      </section>    
+
+      <!-- 中央下に「Now on Sale」およびリンクボックス -->
+      <div class="sale-section">
+        <h2>Now on Sale</h2>
+        <div class="links">
+          {album.data.boothLink && (
+            <a href={album.data.boothLink} class="link-box booth" target="_blank" rel="noopener noreferrer">Booth</a>
+          )}
+          {album.data.bandcampLink && (
+            <a href={album.data.bandcampLink} class="link-box bandcamp" target="_blank" rel="noopener noreferrer">Bandcamp</a>
+          )}
+        </div>
+      </div>
+      
+      <!-- YouTube埋め込み -->
+      {album.data.youtubeEmbed && (
+        <div class="youtube-embed">
+          <iframe
+            src={album.data.youtubeEmbed}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      )}
+    </div>
+  </body>
+  </html>
+
+
+<Footer />
+</Layout>

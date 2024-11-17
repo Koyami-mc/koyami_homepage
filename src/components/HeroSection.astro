@@ -1,0 +1,31 @@
+---
+import "../layouts/heroSection.css";
+
+const topics = [
+  { id: 1, image: "/images/topic1.jpg", title: "Topic 1" },
+  { id: 2, image: "/images/topic2.jpg", title: "Topic 2" },
+  { id: 3, image: "/images/topic3.jpg", title: "Topic 3" },
+  { id: 4, image: "/images/topic4.jpg", title: "Topic 4" },
+];
+---
+
+<div class="hero-section">
+  <!-- 現在のスライドを表示 -->
+  <div class="slide">
+    <img src={topics[0].image} alt={topics[0].title} />
+    
+  </div>
+
+  <!-- ドットナビゲーション -->
+  <div class="dots">
+    {topics.map((topic, index) => (
+      <span
+        class={`dot ${index === 0 ? "active" : ""}`}
+        data-index={index}
+      ></span>
+    ))}
+  </div>
+</div>
+
+<!-- クライアントサイドでJSを読み込む -->
+<script src="../scripts/heroScript.js"></script>

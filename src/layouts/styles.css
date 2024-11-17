@@ -1,0 +1,168 @@
+@import url(reset.css);
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.futomoji {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 auto 30px 0;
+}
+
+.latest-works {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.album-list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap; /* レスポンシブ対応で行を折り返す */
+}
+
+.album {
+  text-align: center;
+  width: 250px;
+  position: relative;
+}
+
+.album-info {
+  margin-bottom: 10px;
+}
+
+.album-title {
+  font-size: 1em;
+  font-weight: bold;
+  color: #000;
+  margin: 5px 0 0 0;
+}
+
+.album-description {
+  font-size: 0.9em;
+  color: #888;
+  margin: 5px 0 0 0;
+}
+
+.album-cover {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.album:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+.new-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff5a5f;
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 0.8em;
+  font-weight: bold;
+  z-index: 1; 
+  border-radius: 5px;
+}
+
+.pickup-video {
+  text-align: center;
+  width: auto;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Heroセクションのスタイル（シンプルで柔らかいデザイン） */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;  /* 明るいグレーで柔らかい印象 */
+  padding: 4rem 0;  /* 上下の余白を調整 */
+  color: #333;  /* 濃いグレーの文字 */
+  text-align: center;
+}
+
+.icon-container {
+  margin-bottom: 1rem;  /* アイコンとタイトルの間に余裕を持たせる */
+}
+
+.site-icon {
+  width: 150px;  /* アイコンの大きさを調整 */
+  height: 150px;
+  background-color: #918c8c;  /* 背景色を白にしてシンプルに */
+  border-radius: 8px;  /* 丸みを持たせて柔らかい印象 */
+  padding: 1px;  /* 余白を設ける */
+}
+
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;  /* タイトルを太字に */
+  color: #333;  /* 濃いグレーでシンプルに */
+  margin-top: 1rem;
+  letter-spacing: 0.5px;  /* 少しだけ文字の間隔を広げて洗練させる */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .album-list {
+    gap: 30px; /* 間隔を縮小 */
+  }
+
+  .album {
+    width: 200px; /* アルバムサイズを縮小 */
+  }
+
+  .album-cover {
+    width: 200px;
+    height: 200px;
+  }
+
+  .futomoji {
+    font-size: 32px; /* フォントサイズを縮小 */
+  }
+
+  /* Heroセクションのレスポンシブ対応 */
+  .site-title {
+    font-size: 2rem; /* タイトルフォントサイズを調整 */
+  }
+
+  .site-icon {
+    width: 120px; /* アイコンを縮小 */
+  }
+}
+
+@media (max-width: 480px) {
+  .album-list {
+    gap: 20px;
+  }
+
+  .album {
+    width: 150px; /* さらに縮小 */
+  }
+
+  .album-cover {
+    width: 150px;
+    height: 150px;
+  }
+
+  .futomoji {
+    font-size: 28px; /* フォントサイズをさらに縮小 */
+  }
+
+  /* Heroセクションのレスポンシブ対応 */
+  .site-title {
+    font-size: 1.5rem; /* フォントサイズをさらに縮小 */
+  }
+
+  .site-icon {
+    width: 100px; /* アイコンをさらに縮小 */
+  }
+}

@@ -1,0 +1,56 @@
+---
+import Header from '../components/Header.astro';
+import { getCollection } from 'astro:content';
+import PageHeader from "../components/PageHeader.astro";
+import "../layouts/works.css";
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+// Self-ReleasesとOthersのフォルダからMarkdownファイルを取得
+const selfReleases = (await getCollection('self-releases')).sort((a, b) => {
+  const dateA = new Date(a.data.date);  // aのリリース日をDate型に変換
+  const dateB = new Date(b.data.date);  // bのリリース日をDate型に変換
+  return dateB.getTime() - dateA.getTime();  // 日付を比較して降順にソート
+});
+
+const others = (await getCollection('others')).sort((a, b) => {
+  const dateA = new Date(a.data.date);  // aのリリース日をDate型に変換
+  const dateB = new Date(b.data.date);  // bのリリース日をDate型に変換
+  return dateB.getTime() - dateA.getTime();  // 日付を比較して降順にソート
+});
+---
+<Layout>
+<Header />
+<PageHeader pageName="Works" />
+
+<section>
+  <h2>Self Releases</h2>
+  <div class="albums">
+    {selfReleases.map((album) => (
+      <a href={`/albums/${album.slug}/`}>
+        <img src={album.data.image} alt={album.data.title} />
+        <h3>{album.data.title}</h3>
+        <p>{album.data.about}</p>
+      </a>
+    ))}
+  </div>
+</section>
+
+<hr />
+
+<section>
+  <h2>Others</h2>
+  <div class="albums">
+    {others.map((album) => (
+      <a href={`/albums/${album.slug}/`}>
+        <img src={album.data.image} alt={album.data.title} />
+        <h3>{album.data.title}</h3>
+        <p>{album.data.about}</p>
+      </a>
+    ))}
+  </div>
+</section>
+
+<Footer />
+
+</Layout>

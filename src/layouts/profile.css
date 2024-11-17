@@ -1,0 +1,111 @@
+@import url(reset.css);
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 追加：垂直方向にも中央寄せ */
+  padding: 1rem;
+  gap: 1rem; /* スペースを確保 */
+}
+
+.profile-left, .profile-right {
+  text-align: center;
+}
+
+.profile-left {
+  width: 40%;
+}
+
+.profile-icon {
+  width: 60%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.icon-credit {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.profile-right {
+  width: 55%;
+  margin: auto; /* 自動で左右の余白を確保し中央寄せ */
+}
+
+.artist-name {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.artist-role {
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.artist-intro {
+  margin-top: 20px;
+}
+
+.artist-intro p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center; /* カラムが縦並びになるので中央寄せ */
+  }
+
+  .profile-left, .profile-right {
+    width: 80%;
+    text-align: center;
+  }
+
+  .profile-icon {
+    width: 60%;
+    max-width: 300px;
+  }
+
+  .artist-name {
+    font-size: 1.8em;
+  }
+
+  .artist-role {
+    font-size: 1em;
+  }
+
+  .artist-intro p {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 0.5rem;
+  }
+
+  .profile-icon {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .artist-name {
+    font-size: 1.5em;
+  }
+
+  .artist-role {
+    font-size: 0.9em;
+  }
+
+  .artist-intro p {
+    font-size: 0.9em;
+  }
+}

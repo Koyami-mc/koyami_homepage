@@ -1,0 +1,83 @@
+@import url(reset.css);
+
+/* 基本設定 */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* カード間のスペース */
+  justify-content: center; /* 中央寄せ */
+  padding: 20px;
+}
+
+.albums a {
+  display: block;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: calc(25% - 16px); /* カードを最大4列に */
+  max-width: 300px; /* カードの最大幅 */
+  text-decoration: none;
+  color: #333;
+}
+
+.albums a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.albums img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.albums h3 {
+  font-size: 1.1rem;
+  margin: 12px 0 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.albums p {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0 12px 12px;
+}
+
+/* セクションタイトル */
+section h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #222;
+  font-weight: bold;
+}
+
+
+/* 区切り線 */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 40px 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .albums a {
+    width: calc(50% - 16px); /* 2列表示 */
+  }
+}
+
+@media (max-width: 480px) {
+  .albums a {
+    width: 100%; /* モバイルでは1列表示 */
+  }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- 動的にOGPデータを挿入 -->
+        <slot name="head"></slot>
+
+        <!-- デフォルトのOGP設定 -->
+        <meta property="og:title" content="こやみ Official Website" />
+        <meta property="og:description" content="音楽アーティスト「こやみ」の公式ウェブサイト" />
+        <meta property="og:image" content="/images/og-default.jpg" />
+        <meta property="og:url" content="https://koyami.netlify.app" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+</head>
+<body>
+    <slot />
+</body>
+</html>

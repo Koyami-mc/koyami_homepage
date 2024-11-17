@@ -1,0 +1,24 @@
+{
+  "name": "koyami-homepage",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^3.1.9",
+    "@astrojs/netlify": "^5.5.4",
+    "@astrojs/react": "^3.6.2",
+    "astro": "^4.16.12",
+    "astro-imagetools": "^0.2.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "svgo": "^3.3.2"
+  }
+}
