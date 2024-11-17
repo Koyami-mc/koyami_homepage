@@ -1,12 +1,16 @@
 ---
 import Header from '../components/Header.astro';
-import HeroSection from '../components/HeroSection.astro';
 import "../layouts/styles.css";
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
+
+
+
+
 ---
 
-<link rel="stylesheet" href="../layouts/styles.css" />
+
+
 
 <Layout>
   <main>
@@ -69,15 +73,17 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <section class="pickup-video">
-      <h2 class="futomoji">Pickup Video</h2>
-      <iframe 
-        width="560" 
-        height="315" 
-        src="https://www.youtube.com/embed/UIaprefPPOg?si=r0d9rNZA3ahmfO7f" 
-        title="YouTube video" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
-    </section>
+        <h2 class="futomoji">Pickup Video</h2>
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/UIaprefPPOg?si=r0d9rNZA3ahmfO7f" 
+            title="YouTube video" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+        </div>
+      </section>
   </main>
   <Footer />
 </Layout>
+
+<!--  -->

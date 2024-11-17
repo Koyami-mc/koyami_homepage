@@ -78,6 +78,24 @@
   margin: auto;
 }
 
+/* YouTube埋め込み動画のレスポンシブ対応 */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* 必要に応じて最大幅を設定 */
+  padding-top: 56.25%; /* アスペクト比 16:9 を維持 */
+  margin: 0 auto; /* 中央寄せ */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* 枠線を削除 */
+}
+
 /* Heroセクションのスタイル（シンプルで柔らかいデザイン） */
 .hero {
   display: flex;
@@ -95,11 +113,12 @@
 }
 
 .site-icon {
-  width: 150px;  /* アイコンの大きさを調整 */
-  height: 150px;
-  background-color: #918c8c;  /* 背景色を白にしてシンプルに */
-  border-radius: 8px;  /* 丸みを持たせて柔らかい印象 */
-  padding: 1px;  /* 余白を設ける */
+  width: 150px; /* 基本サイズ */
+  aspect-ratio: 1 / 1; /* 正方形を維持 */
+  background-color: #918c8c;
+  border-radius: 8px;
+  padding: 1px;
+  object-fit: cover; /* 内容を正方形にフィットさせる */
 }
 
 .site-title {
