@@ -3,129 +3,147 @@
 body {
     margin: 0;
     padding: 0;
-  }
+}
 
 .album-detail {
-  display: grid;
-  grid-template-columns: 2fr 2fr; /* 画像1: 情報2 の比率 */
-  gap: 2rem;
-  padding: 3rem;
-  max-width: 1500px;
-  margin: 3rem auto;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 2fr 2fr; /* 画像1: 情報2 の比率 */
+    gap: 2rem;
+    padding: 3rem;
+    max-width: 1500px;
+    margin: 3rem auto;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .album-image img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
 .album-info h1 {
-  font-size:  3rem ;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: #222;
+    font-size: 5vw; /* ビューポート幅に応じたフォントサイズ */
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #222;
 }
 
-.description{
-  margin-top: 2rem;
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-.description2{
-  margin-top: 0rem;
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-.album-info h3{
-    color: #121212;
+.description {
+    margin-top: 2rem;
+    font-weight: bold;
     font-size: 1.5rem;
 }
 
-.album-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  margin: auto;
-  justify-content: center;
-  color: rgb(68, 67, 67);
+.description2 {
+    margin-top: 0rem;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
+.album-info h3 {
+    color: #121212;
+    font-size: 2vw; /* ビューポート幅に応じたフォントサイズ */
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: auto;
+    justify-content: center;
+    color: rgb(68, 67, 67);
+}
 
 .album-info .release-date,
 .album-info .description {
-  font-size: 1.2rem auto;
-  color: #ba2525;
+    font-size: 1.2rem;
+    color: #ba2525;
 }
 
 .sale-section {
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 3rem;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 
 .sale-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #444;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #444;
 }
 
 .links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .link-box {
-  padding: 0.8rem 1.6rem;
-  border-radius: 12px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, background-color 0.3s;
-  padding: auto;
-  margin-bottom: 3rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.3s;
+    margin-bottom: 3rem;
 }
 
 .link-box.booth {
-  background-color: #fc4d50;
+    background-color: #fc4d50;
 }
 
 .link-box.booth:hover {
-  background-color: #e04549;
-  transform: translateY(-3px);
+    background-color: #e04549;
+    transform: translateY(-3px);
 }
 
 .link-box.bandcamp {
-  background-color: #007bff;
+    background-color: #007bff;
 }
 
 .link-box.bandcamp:hover {
-  background-color: #0056b3;
-  transform: translateY(-3px);
+    background-color: #0056b3;
+    transform: translateY(-3px);
 }
 
 .youtube-embed {
-  margin-top: 2rem;
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 
 .youtube-embed iframe {
-  width: 100%;
-  height: 450px;
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* メディアクエリ */
+@media (max-width: 768px) {
+    .album-detail {
+        grid-template-columns: 1fr; /* スマホサイズで1列に */
+        padding: 1.5rem;
+    }
+
+    .album-info h1 {
+        font-size: 7vw; /* 小さくなった画面に合わせて */
+    }
+
+    .album-info h3 {
+        font-size: 4vw;
+    }
+
+    .description, .description2 {
+        font-size: 1.2rem;
+    }
 }
