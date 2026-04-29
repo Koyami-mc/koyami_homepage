@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import { Image } from 'astro:assets';  // ← 追加
 import PageHeader from "../components/PageHeader.astro";
 import "../layouts/profile.css";
 import Layout from '../layouts/Layout.astro';
@@ -11,7 +12,14 @@ import Footer from '../components/Footer.astro';
   <PageHeader pageName="Profile" />
   <div class="profile-container">
     <div class="profile-left">
-      <img src="/images/icon.jpg" alt="Profile Icon" class="profile-icon" />
+      <Image
+        src="/images/icon.jpg"
+        alt="Profile Icon"
+        class="profile-icon"
+        width={200}
+        height={200}
+        loading="eager"
+      />
       <p class="icon-credit">icon: △○□×様</p>
     </div>
     <div class="profile-right">
@@ -27,6 +35,5 @@ import Footer from '../components/Footer.astro';
     </div>
   </div>
 </div>
-
 <Footer />
 </Layout>

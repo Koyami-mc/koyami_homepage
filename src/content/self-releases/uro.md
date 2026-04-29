@@ -2,7 +2,7 @@
 title: "雨露霜雪"
 about: "しっとりした空気感の1st Album"
 count: "1st Album"
-image: "../images/uro.jpg"
+image: "/images/uro.jpg"
 date: "2022-10-30"
 price: "1,000円"
 description: "――冷え込んだこの世界で、あたたかなものを見つけた。"

@@ -2,7 +2,7 @@
 title: "キャンバスに溶けて"
 about: "「絵を描くこと」をテーマにした2nd EP"
 count: "2nd EP"
-image: "../images/canvas.jpg"
+image: "/images/canvas.jpg"
 date: "2024-04-28"
 price: "1,000円"
 description: "――「私のすべてを込めて、この絵は完成する。」"
