@@ -67,13 +67,12 @@ const latestDate = recentAlbums[0]?.data.date;
     <section class="pickup-video">
       <h2 class="futomoji">Pickup Video</h2>
       <div class="video-container">
-        <iframe
-          src="https://www.youtube.com/embed/UIaprefPPOg?si=r0d9rNZA3ahmfO7f"
-          title="YouTube video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <lite-youtube videoid="MkpFHOoRWGo"></lite-youtube>
       </div>
     </section>
   </main>
   <Footer />
 </Layout>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.2/src/lite-yt-embed.css">
+<script is:inline src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.2/src/lite-yt-embed.js"></script>

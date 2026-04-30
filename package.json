@@ -15,7 +15,7 @@
     "@astrojs/react": "^5.0.4",
     "astro": "^6.1.10",
     "astro-imagetools": "^0.2.7",
-    "lite-youtube-embed": "^0.3.3",
+    "lite-youtube-embed": "^0.3.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
