@@ -7,7 +7,7 @@ body {
 
 .album-detail {
     display: grid;
-    grid-template-columns: 2fr 2fr; /* 画像1: 情報2 の比率 */
+    grid-template-columns: minmax(180px, 2fr) minmax(220px, 2fr);
     gap: 2rem;
     padding: 3rem;
     max-width: 1500px;
@@ -25,7 +25,7 @@ body {
 }
 
 .album-info h1 {
-    font-size: 5vw; /* ビューポート幅に応じたフォントサイズ */
+    font-size: clamp(1.6rem, 3vw, 3rem);
     font-weight: 700;
     margin-bottom: 2rem;
     color: #222;
@@ -45,7 +45,7 @@ body {
 
 .album-info h3 {
     color: #121212;
-    font-size: 2vw; /* ビューポート幅に応じたフォントサイズ */
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 .album-info {
@@ -80,6 +80,7 @@ body {
     gap: 1.5rem;
     justify-content: center;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .link-box {
@@ -131,19 +132,23 @@ body {
 /* メディアクエリ */
 @media (max-width: 768px) {
     .album-detail {
-        grid-template-columns: 1fr; /* スマホサイズで1列に */
+        grid-template-columns: 1fr;
         padding: 1.5rem;
     }
 
     .album-info h1 {
-        font-size: 7vw; /* 小さくなった画面に合わせて */
+        font-size: clamp(1.4rem, 6vw, 2rem);
     }
 
     .album-info h3 {
-        font-size: 4vw;
+        font-size: clamp(0.9rem, 3.5vw, 1.2rem);
     }
 
     .description, .description2 {
         font-size: 1.2rem;
+    }
+
+    .youtube-embed iframe {
+        height: 280px;
     }
 }
