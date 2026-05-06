@@ -2,7 +2,7 @@
 title: "もしも過去に戻れたなら"
 about: "時をコンセプトとした3rd Album"
 count: "3rd Album"
-image: "/images/past.jpg"
+image: "/images/past.webp"
 date: "2024-10-27"
 price: "1,500円"
 description: "――「もしやり直せるとしたら、夢は叶うかな」"

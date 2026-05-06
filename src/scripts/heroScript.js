@@ -1,9 +1,9 @@
 let currentSlide = 0;
 const topics = [
-  { id: 1, image: "images/topic1.jpg", title: "Topic 1" },
-  { id: 2, image: "images/topic2.jpg", title: "Topic 2" },
-  { id: 3, image: "images/topic3.jpg", title: "Topic 3" },
-  { id: 4, image: "images/topic4.jpg", title: "Topic 4" },
+  { id: 1, image: "images/topic1.webp", title: "Topic 1" },
+  { id: 2, image: "images/topic2.webp", title: "Topic 2" },
+  { id: 3, image: "images/topic3.webp", title: "Topic 3" },
+  { id: 4, image: "images/topic4.webp", title: "Topic 4" },
 ];
 
 // スライドの自動切り替え

@@ -2,7 +2,7 @@
 title: "北国へ旅して"
 about: "旅の雰囲気を閉じ込めた5th Album"
 count: "5th Album"
-image: "/images/kitaguni.jpg"
+image: "/images/kitaguni.webp"
 date: "2026-4-26"
 price: "1000円"
 description: "――「楽しい旅行へ、いざ出発！」"

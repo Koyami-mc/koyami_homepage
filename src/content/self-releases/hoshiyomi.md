@@ -2,7 +2,7 @@
 title: "星を読む少女"
 about: "ファンタジー世界の4th Album"
 count: "4th Album"
-image: "/images/hoshiyomi.jpg"
+image: "/images/hoshiyomi.webp"
 date: "2025-10-26"
 price: "1000円"
 description: "――「あの星空に誓ったんだ。立派な星占い師になるって」"

@@ -2,7 +2,7 @@
 title: "CONQUEST"
 about: "Kashiwade、liquid1224との合作アルバム"
 count: "/ Kashiwade / liquid1224"
-image: "/images/conquest.jpg"
+image: "/images/conquest.webp"
 date: "2023-10-29"
 price: "¥1,500"
 description: "Invasion, crumbles. Defenders in despair, hope flickers—last stand."

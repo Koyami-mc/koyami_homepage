@@ -26,7 +26,19 @@ const others = defineCollection({
   schema: albumSchema,
 });
 
+const participationWorks = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/participation-works' }),
+  schema: z.object({
+    title: z.string(),
+    about: z.string(),
+    image: z.string(),
+    date: z.string(),
+    url: z.string(),    // 外部リンク（YouTube等）
+  }),
+});
+
 export const collections = {
   'self-releases': selfReleases,
   'others': others,
+  'participation-works': participationWorks,  // ← 追加
 };

@@ -2,7 +2,7 @@
 title: "甦生"
 about: "生と死がテーマの1st EP"
 count: "1st EP"
-image: "/images/sosei.jpg"
+image: "/images/sosei.webp"
 date: "2022-04-24"
 price: "500円"
 description: "――「この世界はまだ、甦る。」"

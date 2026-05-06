@@ -17,6 +17,12 @@ const others = (await getCollection('others')).sort((a, b) => {
   const dateB = new Date(b.data.date);
   return dateB.getTime() - dateA.getTime();
 });
+
+const participationWorks = (await getCollection('participation-works')).sort((a, b) => {
+  const dateA = new Date(a.data.date);
+  const dateB = new Date(b.data.date);
+  return dateB.getTime() - dateA.getTime();
+});
 ---
 <Layout>
 <Header />
@@ -25,12 +31,15 @@ const others = (await getCollection('others')).sort((a, b) => {
 <section>
   <h2>Self Releases</h2>
   <div class="albums">
-    {selfReleases.map((album) => (
+    {selfReleases.map((album, index) => (
       <a href={`albums/${album.id}/`}>
         <img
           src={album.data.image}
           alt={album.data.title}
-          loading="lazy"
+          width="300"
+          height="300"
+          loading={index === 0 ? 'eager' : 'lazy'}
+          fetchpriority={index === 0 ? 'high' : 'auto'}
         />
         <h3>{album.data.title}</h3>
         <p>{album.data.about}</p>
@@ -42,17 +51,42 @@ const others = (await getCollection('others')).sort((a, b) => {
 <hr />
 
 <section>
-  <h2>Others</h2>
+  <h2>Other Releases</h2>
   <div class="albums">
     {others.map((album) => (
       <a href={`albums/${album.id}/`}>
         <img
           src={album.data.image}
           alt={album.data.title}
+          width="300"
+          height="300"
           loading="lazy"
+          fetchpriority="auto"
         />
         <h3>{album.data.title}</h3>
         <p>{album.data.about}</p>
+      </a>
+    ))}
+  </div>
+</section>
+
+<hr />
+
+<section>
+  <h2>Participation Works</h2>
+  <div class="albums">
+    {participationWorks.map((work) => (
+      <a href={work.data.url} target="_blank" rel="noopener noreferrer">
+        <img
+          src={work.data.image}
+          alt={work.data.title}
+          width="300"
+          height="300"
+          loading="lazy"
+          fetchpriority="auto"
+        />
+        <h3>{work.data.title}</h3>
+        <p>{work.data.about}</p>
       </a>
     ))}
   </div>

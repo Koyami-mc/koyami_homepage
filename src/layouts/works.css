@@ -35,7 +35,8 @@ body {
 
 .albums img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;   /* ← 正方形に固定してCLSを防ぐ */
+  object-fit: cover;
   border-bottom: 1px solid #ddd;
 }
 

@@ -2,7 +2,7 @@
 title: "卒業証書"
 about: "卒業をイメージしたノスタルジックなEP"
 count: "3rd EP"
-image: "/images/graduation.jpg"
+image: "/images/graduation.webp"
 date: "2025-04-27"
 price: "1,000円"
 description: "――旅立つあなたに、明るい明日が訪れますように。"

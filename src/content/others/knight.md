@@ -2,7 +2,7 @@
 title: "救国の若き騎士の物語"
 about: "Orchestral Compilation Album Vol.1"
 count: "Orchestral Compilation Album Vol.1"
-image: "/images/knight.jpg"
+image: "/images/knight.webp"
 date: "2024-10-27"
 price: "2,000円"
 description: "――紡がれた壮大な物語を、10名による表情豊かなオーケストラ曲と共に。"
